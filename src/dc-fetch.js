@@ -110,7 +110,7 @@ export default class DcFetch {
 
         let instance = this.instance;
 
-        /*
+        /**
          * 封装内不做处理，如果需要，通过如下方式，或者其他方法自行处理
          * axiosInstance.interceptors.request.use(cfg => {
          *   // Do something before request is sent
@@ -120,18 +120,18 @@ export default class DcFetch {
          *   return Promise.reject(error);
          * });
          *
-         * */
+         **/
 
         if (isMock) {
             instance = this.mockInstance;
         }
 
-        /*
-        *
-        * Content-Type application/x-www-form-urlencoded 存在问题
-        * 参见：https://github.com/axios/axios/issues/362
-        *
-        * */
+        /**
+         *
+         * Content-Type application/x-www-form-urlencoded 存在问题
+         * 参见：https://github.com/axios/axios/issues/362
+         *
+         **/
         const defaultsContentType = instance.defaults.headers[method]['Content-Type'] || '';
         const contentType = (options.headers && options.headers['Content-Type']) || '';
         if (
