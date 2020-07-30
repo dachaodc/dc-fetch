@@ -16,7 +16,7 @@
     "admin",
     "project"
   ],
-  "author": "zyc",
+  "author": "dachaodc <da_chaodc@163.com> (https://github.com/dachaodc)",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
